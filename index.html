@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EliteGamerFit - Premium Gaming Fitness Programs</title>
+    <meta name="description" content="EliteGamerFit offers premium fitness programs for competitive gamers and esports professionals. Improve your physical and mental performance with our expert training.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --electric-blue: #00D4FF;
+            --neon-green: #39FF14;
+            --dark-charcoal: #2A2A2A;
+            --glass: rgba(255, 255, 255, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--dark-charcoal);
+        }
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, var(--electric-blue), var(--neon-green));
+            opacity: 0.1;
+            animation: float 20s linear infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(-50%, -50%); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            padding: 2rem;
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(to right, var(--electric-blue), var(--neon-green));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            background: var(--neon-green);
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(57, 255, 20, 0.3);
+        }
+
+        .section {
+            padding: 4rem 2rem;
+            background: var(--dark-charcoal);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 2rem;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .testimonial {
+            background: var(--glass);
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            border-radius: 5px;
+        }
+
+        .contact-form button {
+            width: 100%;
+            padding: 1rem;
+            background: var(--electric-blue);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Transform Your Gaming Performance</h1>
+            <p>Scientifically designed fitness programs for competitive gamers and esports professionals</p>
+            <button class="btn">Get Started</button>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="grid">
+            <div class="card">
+                <h3>Peak Performance</h3>
+                <p>Optimize your physical and mental capabilities for maximum gaming potential.</p>
+            </div>
+            <div class="card">
+                <h3>Custom Programs</h3>
+                <p>Tailored workout plans based on your gaming schedule and goals.</p>
+            </div>
+            <div class="card">
+                <h3>Expert Coaching</h3>
+                <p>Trained professionals with gaming and fitness expertise.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="testimonial">
+            <p>"EliteGamerFit transformed my gaming career. My reaction times improved by 30%!"</p>
+            <h4>John "Apex" Smith</h4>
+            <p>Professional CS:GO Player</p>
+        </div>
+        <div class="testimonial">
+            <p>"The best investment I've made for my team's performance. Highly recommended!"</p>
+            <h4>Sarah Johnson</h4>
+            <p>Team Manager, Team Velocity</p>
+        </div>
+        <div class="testimonial">
+            <p>"I can't believe how much more focused I am during long gaming sessions."</p>
+            <h4>Michael Chen</h4>
+            <p>Esports Athlete</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="contact-form">
+            <form id="contactForm">
+                <input type="text" placeholder="Name" required>
+                <input type="email" placeholder="Email" required>
+                <textarea placeholder="Message" rows="5" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('contactForm');
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                // Add your form submission logic here
+                alert('Thank you for your message! We will get back to you soon.');
+                form.reset();
+            });
+
+            // Add smooth scroll behavior
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
