@@ -1,2 +1,3 @@
-# elitegamerfit
-EliteGamerFit website
+# EliteGamerFit Website
+
+Live site: https://xstreamflex.github.io/elitegamerfit/
